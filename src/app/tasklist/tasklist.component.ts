@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 
@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tasklist.component.css']
 })
 export class TasklistComponent implements OnInit {
-
+  @Input() Tasks = [];
   constructor() { }
-
+  addTask(newTask: string) {
+    if (newTask) {
+      this.Tasks.push(newTask);
+    }
+  }
   ngOnInit() {
   }
 

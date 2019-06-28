@@ -1,5 +1,7 @@
-<p>tasklist works!</p>
-<h2>Products</h2>
+<input #newTask (keyup.enter)="addTask(newTask.value)" >
 
-<div *ngFor="let product of products">
-</div>
+<button (click)="addTask(newTask.value)">TaskToDo</button>
+
+<ul>
+    <li *ngFor="let Task of Tasks">{{Task}}</li>
+</ul>`
