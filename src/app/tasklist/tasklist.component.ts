@@ -13,6 +13,7 @@ export class TasklistComponent implements OnInit {
   addTask(newTask: string) {
     if (newTask) {
       this.Tasks.push(newTask);
+      document.querySelector('form').reset();
     }
   }
   ngOnInit() {

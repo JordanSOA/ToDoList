@@ -1,8 +1,8 @@
 
-<div class="taskInput">
+<form class="taskInput">
     <input #newTask (keyup.enter)="addTask(newTask.value)">
     <button (click)="addTask(newTask.value)">TaskToDo</button>
-</div>
+</form>
 
 <div class="todoSection">
     <h3>ToDoSection</h3>
