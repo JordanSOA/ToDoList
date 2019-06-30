@@ -1,7 +1,12 @@
-<input #newTask (keyup.enter)="addTask(newTask.value)" >
 
-<button (click)="addTask(newTask.value)">TaskToDo</button>
+<div class="taskInput">
+    <input #newTask (keyup.enter)="addTask(newTask.value)">
+    <button (click)="addTask(newTask.value)">TaskToDo</button>
+</div>
 
-<ul>
-    <li *ngFor="let Task of Tasks">{{Task}}</li>
-</ul>`
+<div class="todoSection">
+    <h3>ToDoSection</h3>
+    <div class="todoList">
+        <div class="todo" *ngFor="let Task of Tasks">{{Task}}</div>
+    </div>
+</div>
