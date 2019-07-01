@@ -7,6 +7,7 @@
 <div class="todoSection">
     <h3>ToDoSection</h3>
     <div class="todoList">
-        <div class="todo" *ngFor="let Task of Tasks">{{Task}}</div>
+        <div id="flist"class="todo" *ngFor="let Task of Tasks;">{{ Task }} <span class="timeStamp"> {{ today | date }} </span></div>
     </div>
+    <!-- <button (click)="deleteAll(Tasks)">delete</button> -->
 </div>
